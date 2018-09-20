@@ -1,0 +1,672 @@
+// Variables modifiers
+// ========================================================================
+
+@base-body-background: 				#ffffff; //#F8F8F8;
+@base-body-font-family: 			Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@base-body-font-weight:                         300;
+
+@base-link-text-decoration:                     none;
+@base-link-hover-text-decoration:               underline;
+
+@base-heading-font-family: 			"Proxima Nova",Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif; //@base-body-font-family;
+@base-heading-font-weight:                      300;
+@base-heading-color:                            #111;
+@base-h1-font-size:                             50px;
+@base-h1-line-height:                           60px;
+@base-h2-font-size:                             40px;
+@base-h2-line-height:                           50px;
+@base-h3-font-size:                             30px;
+@base-h3-line-height:                           40px;
+@base-h4-font-size:                             20px;
+@base-h4-line-height:                           30px;
+
+
+/* Base modifiers
+ ========================================================================== */
+
+/* Desktop and smaller */
+@media (max-width: @breakpoint-xlarge) {
+
+    h1, .uk-h1 {
+	    font-size: ( @base-h1-font-size * 85 ) / 100;
+    	line-height: ( @base-h1-line-height * 85 ) / 100;
+	}
+
+	h2, .uk-h2 {
+	    font-size: ( @base-h2-font-size * 85 ) / 100;
+    	line-height: ( @base-h2-line-height * 85 ) / 100;
+	}
+
+	h3, .uk-h3 {
+	    font-size: ( @base-h3-font-size * 85 ) / 100;
+    	line-height: ( @base-h3-line-height * 85 ) / 100;
+	}
+
+	h4, .uk-h4 {
+	    font-size: ( @base-h4-font-size * 85 ) / 100;
+    	line-height: ( @base-h4-line-height * 85 ) / 100;
+	}
+
+	h5, .uk-h5 {
+	    font-size: ( @base-h5-font-size * 85 ) / 100;
+    	line-height: ( @base-h5-line-height * 85 ) / 100;
+	}
+
+	h6, .uk-h6 {
+	    font-size: ( @base-h6-font-size * 85 ) / 100;
+    	line-height: ( @base-h6-line-height * 85 ) / 100;
+	}
+
+}
+
+/* Tablet and smaller */
+@media (max-width: @breakpoint-medium) {
+
+    h1, .uk-h1 {
+	    font-size: ( @base-h1-font-size * 75 ) / 100;
+    	line-height: ( @base-h1-line-height * 75 ) / 100;
+	}
+
+	h2, .uk-h2 {
+	    font-size: ( @base-h2-font-size * 75 ) / 100;
+    	line-height: ( @base-h2-line-height * 75 ) / 100;
+	}
+
+	h3, .uk-h3 {
+	    font-size: ( @base-h3-font-size * 75 ) / 100;
+    	line-height: ( @base-h3-line-height * 75 ) / 100;
+	}
+
+	h4, .uk-h4 {
+	    font-size: ( @base-h4-font-size * 75 ) / 100;
+    	line-height: ( @base-h4-line-height * 75 ) / 100;
+	}
+
+	h5, .uk-h5 {
+	    font-size: ( @base-h5-font-size * 75 ) / 100;
+    	line-height: ( @base-h5-line-height * 75 ) / 100;
+	}
+
+	h6, .uk-h6 {
+	    font-size: ( @base-h6-font-size * 75 ) / 100;
+    	line-height: ( @base-h6-line-height * 75 ) / 100;
+	}
+
+}
+
+/* Phone landscape and smaller */
+@media (max-width: @breakpoint-small-max) {
+
+    h1, .uk-h1 {
+	    font-size: ( @base-h1-font-size * 65 ) / 100;
+    	line-height: ( @base-h1-line-height * 65 ) / 100;
+	}
+
+	h2, .uk-h2 {
+	    font-size: ( @base-h2-font-size * 65 ) / 100;
+    	line-height: ( @base-h2-line-height * 65 ) / 100;
+	}
+
+	h3, .uk-h3 {
+	    font-size: ( @base-h3-font-size * 65 ) / 100;
+    	line-height: ( @base-h3-line-height * 65 ) / 100;
+	}
+
+	h4, .uk-h4 {
+	    font-size: ( @base-h4-font-size * 65 ) / 100;
+    	line-height: ( @base-h4-line-height * 65 ) / 100;
+	}
+
+	h5, .uk-h5 {
+	    font-size: ( @base-h5-font-size * 65 ) / 100;
+    	line-height: ( @base-h5-line-height * 65 ) / 100;
+	}
+
+	h6, .uk-h6 {
+	    font-size: ( @base-h6-font-size * 65 ) / 100;
+    	line-height: ( @base-h6-line-height * 65 ) / 100;
+	}
+
+}
+
+
+
+
+
+@path-fonts : '../../../fonts/proxima-nova';
+//@icon-font-path: "../fonts/icon";
+@font-face {
+    font-family: 'proxima_nova_altblack';
+    src: url('@{path-fonts}/Proxima-Nova-Alt-Black-webfont.eot');
+    src: url('@{path-fonts}/Proxima-Nova-Alt-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Black-webfont.woff2') format('woff2'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Black-webfont.woff') format('woff'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Black-webfont.ttf') format('truetype'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Black-webfont.svg#proxima_nova_altblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_altbold';
+    src: url('@{path-fonts}/Proxima-Nova-Alt-Bold-webfont.eot');
+    src: url('@{path-fonts}/Proxima-Nova-Alt-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Bold-webfont.woff2') format('woff2'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Bold-webfont.woff') format('woff'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Bold-webfont.ttf') format('truetype'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Bold-webfont.svg#proxima_nova_altbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('@{path-fonts}/Proxima-Nova-Alt-Regular-webfont.eot');
+    src: url('@{path-fonts}/Proxima-Nova-Alt-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Regular-webfont.woff2') format('woff2'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Regular-webfont.woff') format('woff'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Regular-webfont.ttf') format('truetype'),
+         url('@{path-fonts}/Proxima-Nova-Alt-Regular-webfont.svg#proxima_nova_altregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'proxima_nova_scosfthin';
+    src: url('@{path-fonts}/Proxima-Nova-ScOsf-Thin-webfont.eot');
+    src: url('@{path-fonts}/Proxima-Nova-ScOsf-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{path-fonts}/Proxima-Nova-ScOsf-Thin-webfont.woff2') format('woff2'),
+         url('@{path-fonts}/Proxima-Nova-ScOsf-Thin-webfont.woff') format('woff'),
+         url('@{path-fonts}/Proxima-Nova-ScOsf-Thin-webfont.ttf') format('truetype'),
+         url('@{path-fonts}/Proxima-Nova-ScOsf-Thin-webfont.svg#proxima_nova_scosfthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_ltsemibold';
+    src: url('@{path-fonts}/Proxima-Nova-Semibold-webfont.eot');
+    src: url('@{path-fonts}/Proxima-Nova-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{path-fonts}/Proxima-Nova-Semibold-webfont.woff2') format('woff2'),
+         url('@{path-fonts}/Proxima-Nova-Semibold-webfont.woff') format('woff'),
+         url('@{path-fonts}/Proxima-Nova-Semibold-webfont.ttf') format('truetype'),
+         url('@{path-fonts}/Proxima-Nova-Semibold-webfont.svg#proxima_nova_ltsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_ltthin';
+    src: url('@{path-fonts}/Proxima-Nova-Thin-webfont.eot');
+    src: url('@{path-fonts}/Proxima-Nova-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{path-fonts}/Proxima-Nova-Thin-webfont.woff2') format('woff2'),
+         url('@{path-fonts}/Proxima-Nova-Thin-webfont.woff') format('woff'),
+         url('@{path-fonts}/Proxima-Nova-Thin-webfont.ttf') format('truetype'),
+         url('@{path-fonts}/Proxima-Nova-Thin-webfont.svg#proxima_nova_ltthin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'perpetua';
+
+        /* for IE */
+	src: url('../../../fonts/perpetua/perpetua-titling-mt-light.eot');
+
+        /*
+         * for non-IE: first see if the font exists locally on the browser's
+         * computer.  If so, use that copy of the font.  Otherwise, load it
+         * from the server
+         */
+	src: local('perpetua'),
+	     url('../../../fonts/perpetua/perpetua-titling-mt-light.ttf') format('truetype');
+}
+
+/*
+body{background-color: red !important}
+*/
+
+@sup-xxs: ~" (min-width: 320px )";
+@sup-xs:  ~" (min-width: 360px )";
+@sup-sm:  ~" (min-width: 480px )";
+@sup-md:  ~" (min-width: 768px )";
+@sup-lg:  ~" (min-width: 960px )";
+@sup-xl:  ~" (min-width: 1220px)";
+@sup-xxl: ~" (min-width: 1360px)";
+@sup-xxxl: ~"(min-width: 1500px)";
+
+@inf-xxs: ~" (max-width: 319px )";
+@inf-xs:  ~" (max-width: 359px )";
+@inf-sm:  ~" (max-width: 479px )";
+@inf-md:  ~" (max-width: 767px )";
+@inf-lg:  ~" (max-width: 959px )";
+@inf-xl:  ~" (max-width: 1219px)";
+@inf-xxl: ~" (max-width: 1359px)";
+@inf-xxxl: ~"(max-width: 1499px)";
+
+@xs-to-sm: ~" (min-width: 480px ) and (max-width: 767px )";
+@sm-to-md: ~" (min-width: 768px ) and (max-width: 959px )";
+@md-to-lg: ~" (min-width: 960px ) and (max-width: 1219px)";
+@lg-to-xl: ~" (min-width: 1220px) and (max-width: 1359px)";
+
+
+#flo-fix-breakpoint::before, #flo-fix-breakpoint::after{
+     position:absolute;
+     content:"";
+     top:0;
+     width:33%;
+     height:20px;
+     color:white;
+     z-index: 12000;
+     text-align: left;
+} 
+
+#flo-fix-breakpoint::before, #flo-fix-breakpoint::after{
+     position:absolute;
+     content:"";
+     top:0;
+     width:33%;
+     height:20px;
+     color:white;
+     z-index: 12000;
+     text-align: left;
+} 
+
+
+#flo-fix-breakpoint::before{
+  background-color: blue;
+  left:0; 
+  content:"@sup 0 "
+}
+
+#flo-fix-breakpoint::after{
+  background-color: black;
+  right:0; 
+  text-align: right;
+  content:"@inf total width "
+}
+
+@media  @sup-xxs{#flo-fix-breakpoint:before{content:"@sup 320px ";}}
+@media  @sup-xs {#flo-fix-breakpoint:before{content:"@sup 360px ";}}
+@media  @sup-sm {#flo-fix-breakpoint:before{content:"@sup 480px ";}} //@breakpoint-small
+@media  @sup-md {#flo-fix-breakpoint:before{content:"@sup 768px ";}} //@breakpoint-medium
+@media  @sup-lg {#flo-fix-breakpoint:before{content:"@sup 960px ";}} //@breakpoint-large
+@media  @sup-xl {#flo-fix-breakpoint:before{content:"@sup 1220px";}} //@breakpoint-xlarge
+@media  @sup-xxl{#flo-fix-breakpoint:before{content:"@sup 1360px";}}
+
+//@media @... { }
+
+
+@media  @inf-xxl{#flo-fix-breakpoint:after{content:"@inf  1359px";}}
+@media  @inf-xl {#flo-fix-breakpoint:after{content:"@inf  1219px";}}
+@media  @inf-lg {#flo-fix-breakpoint:after{content:"@inf  959px ";}}
+@media  @inf-md {#flo-fix-breakpoint:after{content:"@inf  767px ";}}
+@media  @inf-sm {#flo-fix-breakpoint:after{content:"@inf  479px ";}}
+@media  @inf-xs {#flo-fix-breakpoint:after{content:"@inf  359px ";}}
+@media  @inf-xxs{#flo-fix-breakpoint:after{content:"@inf  319px ";}}
+
+
+/*
+.tm-site
+.tm-header
+.tm-overlay-navigation
+.tm-site-branding
+.tm-primary-menu
+.tm-main uk-block
+.uk-grid
+.tm-content
+.article
+.article header
+.tm-article-content 
+*/
+
+/*
+.tm-site               {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+.tm-header             {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+
+.tm-primary-menu   {
+    
+    
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+
+
+.tm-overlay-navigation {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+.tm-site-branding      {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+.tm-primary-menu       {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+.tm-main     {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+
+.tm-content            {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+.article               {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+.article header        {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+.tm-article-content    {
+	@media @sup-xxs {}
+	@media @sup-xs  {}
+	@media @sup-sm  {}
+	@media @sup-md  {}
+	@media @sup-lg  {}
+	@media @sup-xl  {}
+	@media @sup-xxl {}
+}
+
+*/
+
+//uk-heading-large
+
+//uk-article-title
+
+//uk-display-inline
+
+
+
+
+/* Large */
+@media (min-width: @breakpoint-xlarge) {
+
+    [class*='uk-push-xlarge-'],
+    [class*='uk-pull-xlarge-'] { position: relative; }
+
+    /*
+     * Push
+     */
+
+    /* Halves */
+    .uk-push-xlarge-1-2,
+    .uk-push-xlarge-2-4,
+    .uk-push-xlarge-3-6,
+    .uk-push-xlarge-5-10 { left: 50%; }
+
+    /* Thirds */
+    .uk-push-xlarge-1-3,
+    .uk-push-xlarge-2-6 { left: 33.333%; }
+    .uk-push-xlarge-2-3,
+    .uk-push-xlarge-4-6 { left: 66.666%; }
+
+    /* Quarters */
+    .uk-push-xlarge-1-4 { left: 25%; }
+    .uk-push-xlarge-3-4 { left: 75%; }
+
+    /* Fifths */
+    .uk-push-xlarge-1-5,
+    .uk-push-xlarge-2-10 { left: 20%; }
+    .uk-push-xlarge-2-5,
+    .uk-push-xlarge-4-10 { left: 40%; }
+    .uk-push-xlarge-3-5,
+    .uk-push-xlarge-6-10 { left: 60%; }
+    .uk-push-xlarge-4-5,
+    .uk-push-xlarge-8-10 { left: 80%; }
+
+    /* Sixths */
+    .uk-push-xlarge-1-6 { left: 16.666%; }
+    .uk-push-xlarge-5-6 { left: 83.333%; }
+
+    /* Tenths */
+    .uk-push-xlarge-1-10 { left: 10%; }
+    .uk-push-xlarge-3-10 { left: 30%; }
+    .uk-push-xlarge-7-10 { left: 70%; }
+    .uk-push-xlarge-9-10 { left: 90%; }
+
+    /*
+     * Pull
+     */
+
+     /* Halves */
+     .uk-pull-xlarge-1-2,
+     .uk-pull-xlarge-2-4,
+     .uk-pull-xlarge-3-6,
+     .uk-pull-xlarge-5-10 { left: -50%; }
+
+     /* Thirds */
+     .uk-pull-xlarge-1-3,
+     .uk-pull-xlarge-2-6 { left: -33.333%; }
+     .uk-pull-xlarge-2-3,
+     .uk-pull-xlarge-4-6 { left: -66.666%; }
+
+     /* Quarters */
+     .uk-pull-xlarge-1-4 { left: -25%; }
+     .uk-pull-xlarge-3-4 { left: -75%; }
+
+     /* Fifths */
+     .uk-pull-xlarge-1-5,
+     .uk-pull-xlarge-2-10 { left: -20%; }
+     .uk-pull-xlarge-2-5,
+     .uk-pull-xlarge-4-10 { left: -40%; }
+     .uk-pull-xlarge-3-5,
+     .uk-pull-xlarge-6-10 { left: -60%; }
+     .uk-pull-xlarge-4-5,
+     .uk-pull-xlarge-8-10 { left: -80%; }
+
+     /* Sixths */
+     .uk-pull-xlarge-1-6 { left: -16.666%; }
+     .uk-pull-xlarge-5-6 { left: -83.333%; }
+
+     /* Tenths */
+     .uk-pull-xlarge-1-10 { left: -10%; }
+     .uk-pull-xlarge-3-10 { left: -30%; }
+     .uk-pull-xlarge-7-10 { left: -70%; }
+     .uk-pull-xlarge-9-10 { left: -90%; }
+}
+
+
+
+
+
+//
+// Component: Base
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+/*
+@base-body-background:                          @global-background;
+@base-body-font-size:                           @global-font-size;
+@base-body-line-height:                         @global-line-height;
+@base-body-color:                               @global-color;
+
+@base-link-color:                               @global-link-color;
+@base-link-hover-color:                         @global-link-hover-color;
+@base-ins-color:                                @global-color;
+@base-mark-color:                               @global-color;
+
+@base-margin-vertical:                          @global-margin;
+
+@base-heading-color:                            @global-color;
+@base-heading-margin-top:                       @global-margin-large;
+@base-h1-font-size:                             round((@global-font-size * 2.6)); // 36px / 42px
+@base-h1-line-height:                           round((@base-h1-font-size * 1.154)); // 42px / 48px
+@base-h2-font-size:                             round((@global-font-size * 1.74)); // 24px / 28px
+@base-h2-line-height:                           round((@base-h2-font-size * 1.27)); // 30px / 36px
+@base-h3-font-size:                             round((@global-font-size * 1.28)); // 18px / 20px
+@base-h3-line-height:                           round((@base-h3-font-size * 1.32)); // 24px / 26px
+@base-h4-font-size:                             round((@global-font-size * 1.14)); // 16px / 18px
+@base-h4-line-height:                           round((@base-h4-font-size * 1.36)); // 22px / 24px
+@base-h5-font-size:                             @global-font-size; // 14px / 16px
+@base-h5-line-height:                           @global-line-height; // 20px / 22px
+@base-h6-font-size:                             round((@global-font-size * 0.85)); // 12px / 14px
+@base-h6-line-height:                           round((@base-h6-font-size * 1.46)); // 18px / 20px
+
+@base-hr-border:                                @global-border;
+
+@base-blockquote-border:                        @global-border;
+@base-blockquote-font-size:                     round((@global-font-size * 1.14)); // 16px / 18px
+@base-blockquote-line-height:                   round((@base-blockquote-font-size * 1.36)); // 22px / 24px
+
+@base-code-font-size:                           round((@global-font-size * 0.85)); // 12px / 14px
+
+@base-pre-background:                           #fafafa;
+@base-pre-color:                                @global-color;
+@base-pre-font-size:                            round((@global-font-size * 0.85)); // 12px / 14px
+@base-pre-line-height:                          round((@base-pre-font-size * 1.46)); // 18px / 20px
+
+//
+// New
+//
+
+@base-body-gradient-inner:                      @global-background;
+@base-body-gradient-outer:                      @global-background;
+
+@base-code-border:                              @global-border;
+@base-code-background:                          #fafafa;
+@base-pre-border:                               @global-border;
+
+
+// Body
+// ========================================================================
+
+.hook-base-body() {
+    background-image: -webkit-radial-gradient(100% 100%, center, @base-body-gradient-inner, @base-body-gradient-outer);
+    background-image: radial-gradient(100% 100% at center, @base-body-gradient-inner, @base-body-gradient-outer);
+}
+
+
+// Links
+// ========================================================================
+
+.hook-base-link() {}
+
+.hook-base-link-hover() {}
+
+
+// Text-level semantics
+// ========================================================================
+
+.hook-base-code() {
+    padding: 0 4px;
+    border: 1px solid @base-code-border;
+    border-radius: 3px;
+    background: @base-code-background;
+}
+
+
+// Headings
+// ========================================================================
+
+.hook-base-h() {}
+
+.hook-base-h1() {}
+
+.hook-base-h2() {}
+
+.hook-base-h3() {}
+
+.hook-base-h4() {}
+
+.hook-base-h5() {}
+
+.hook-base-h6() {}
+
+
+// Horizontal rules
+// ========================================================================
+
+.hook-base-hr() {}
+
+
+// Blockquotes
+// ========================================================================
+
+.hook-base-blockquote() {}
+
+
+// Preformatted text
+// ========================================================================
+
+.hook-base-pre() {
+    border: 1px solid @base-pre-border;
+    border-radius: 3px;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-base-misc() {}
+*/

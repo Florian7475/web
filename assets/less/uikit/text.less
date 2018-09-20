@@ -1,0 +1,85 @@
+// Variables modifiers
+// ========================================================================
+
+@text-small-font-size:                          12px;
+@text-large-font-size:                          17px;
+@text-large-line-height:                        28px;
+@text-large-font-weight:                        300;
+
+
+/*
+.uk-grid {outline:  green 1px solid }
+.uk-grid > div {outline:  yellow 1px solid }
+.uk-grid > div > div{outline:  red 1px solid }
+.uk-grid > div > div *{outline:  blue 1px solid }
+
+.uk-grid .uk-grid {outline:  green 2px  dashed }
+.uk-grid .uk-grid > div {outline:  yellow 2px dashed }
+.uk-grid .uk-grid > div > div{outline:  red 2px dashed }
+.uk-grid .uk-grid > div > div *{outline:  blue 2px dashed }
+*/
+h1, h2, h3, h4, h5, h6 { font-family: "proxima_nova_ltsemibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.flo-bolder{font-family: "proxima_nova_altblack", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+[class*="navbar-nav"]  li  a { font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+
+
+/*
+// Variables
+// ========================================================================
+
+@text-small-font-size:                          round((@global-font-size * 0.78)); // 11px / 12px
+@text-small-line-height:                        round((@text-small-font-size * 1.49)); // 16px / 18px
+@text-large-font-size:                          round((@global-font-size * 1.28)); // 18px / 20px
+@text-large-line-height:                        round((@text-large-font-size * 1.32)); // 24px / 26px
+
+@text-muted-color:                              @global-muted-color;
+@text-contrast-color:                           @global-contrast-color;
+
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-text-misc() {}
+*/
+
+
+/*
+
+from utility.less de uikit ori para uk-heading-large 
+
+
+
+@utility-heading-large-small-font-size:         36px;
+@utility-heading-large-small-line-height:       42px;
+
+@utility-heading-large-font-size:               52px;
+@utility-heading-large-line-height:             64px;
+
+*/
+
+
+
+.hook-utility-misc() {
+
+@utility-heading-large-font-size:         100px;
+
+.uk-heading-large {
+    font-size: @utility-heading-large-font-size / 2.8 ;
+
+
+
+@media  @sup-xxs{ font-size: @utility-heading-large-font-size / 2.6 ;}//>320
+@media  @sup-xs { font-size: @utility-heading-large-font-size / 2.4 ;}//>360
+@media  @sup-sm { font-size: @utility-heading-large-font-size / 2.2 ;}//>480 //@breakpoint-small
+@media  @sup-md { font-size: @utility-heading-large-font-size / 2.0 ; line-height: 1.1}//>768 //@breakpoint-medium
+@media  @sup-lg { font-size: @utility-heading-large-font-size / 1.8 ;}//>960 //@breakpoint-large
+@media  @sup-xl { font-size: @utility-heading-large-font-size / 1.6 ;}//>1220 //@breakpoint-xlarge
+@media  @sup-xxl{ font-size: @utility-heading-large-font-size / 1.4 ;}//>1360
+@media  @sup-xxxl{ font-size: @utility-heading-large-font-size / 1.2 ;}//>1500
+}
+
+}
