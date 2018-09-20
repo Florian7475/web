@@ -13,7 +13,7 @@
 if ( wp_is_mobile() ) {
     echo "mobile";
 }else{ 
-    echo "no mobile"; }
+    echo "1no mobile"; }
 
 
 beans_load_document();
